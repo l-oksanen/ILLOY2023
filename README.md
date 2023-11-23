@@ -9,10 +9,9 @@ Implementation of the algorithm introduced in
 Given an incidence matrix $E(j, k)$, $j,k=1,\dots,n$ for a graph with $n$ nodes and numbers $d(j, k)$ for $j, k \in B \times B$ for some $B \subset \{1,\dots, n\}$, we want to check if the numbers are distances in the graph. 
 
 We begin by computing the shortest paths in the graph. These are encoded by
+
 $$
-P(d, j, k)
-= 
-\begin{cases}
+P(d, j, k) = \begin{cases}
 1 & \text{there is a path of length $\le d$ between nodes $j$ and $k$}
 \\
 0 & \text{otherwise}
