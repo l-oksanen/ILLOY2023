@@ -36,7 +36,11 @@ This is implemented by `c_dis_check` in [classical.py](classical.py) for testing
 
 The method `c_dist_check_groups` calls `c_dist_check` several times. With the grouping given by `dmat2ds_groups` in [expected.py](expected.py), its quantum analogue `Dist_check_groups` can be used to implement the algorithm for which the number of qubits scales as $O(n^2)$. Using `Dist_check` directly without grouping yields the complexity $O(n^3)$, but the resulting simplified algorithm can be more efficient for small networks. The simplified algorithm does not use permuted indices, and a reader interested only in the simplified algorithm can ignore the permutations in [indexing.py](indexing.py).
 
-`Bitflip2Phaseflip` is a generic circuit that converts a bit flip oracle to a phase flip oracle. After this conversion, `Dist_check` and `Dist_check_groups` can be used as oracles in Grover's algorithm, implemented in [grover.py](grover.py). Example driver routines running Grover's algorithm are given in [driver.ipynb](driver.ipynb). 
+`Bitflip2Phaseflip` is a generic circuit that converts a bit flip oracle to a phase flip oracle. After this conversion, `Dist_check` and `Dist_check_groups` can be used as oracles in Grover's algorithm, implemented in [grover.py](grover.py). 
+
+## Examples
+
+Example driver routines running Grover's algorithm are given in [driver.ipynb](driver.ipynb). Notebook [simulation.ipynb](simulation.ipynb) reproduces the plots in Figure 3 in Appendix A of _Quantum computing algorithms for inverse problems on graphs and an NP-complete inverse problem_. 
 
 ## Unit tests
 
